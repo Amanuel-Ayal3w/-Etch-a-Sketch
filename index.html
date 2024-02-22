@@ -8,8 +8,8 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-    <div class="flex container">
-        <div class="title">Etch-A-SKETCH</div>
+    <div class="flex-container">
+        <div class="title">ETCH-A-SKETCH</div>
         <div class="content">
             <div class="board"></div>
             <div class="buttons">
@@ -18,14 +18,12 @@
                 <button class="erasorButton" onclick="changeColor('white')">Eraser</button>
                 <button class="black" onclick="changeColor('random')">Random</button>
                 <button class="Reset" onclick="resetBoard()">Reset</button>
-            </div>
-            <div class="size">
                 <input
                     type="text"
-                    placeholder="Size of Board"
+                    placeholder=" Input size"
                     onchange="GiveSizeForGrid(this.value)"
                 />
-                <button onclick="setSize()">Set Size</button>
+                <button class = "set-size" onclick="setSize()">Set Size</button>
             </div>
         </div>
     </div>
