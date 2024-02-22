@@ -3,24 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>ETCH-A-SKETCH</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
 <body>
     <div class="flex-container">
-        <div class="title">ETCH-A-SKETCH</div>
+        <p>ETCH-A-SKETCH<p>
         <div class="content">
             <div class="board"></div>
             <div class="buttons">
-                <label for="colorpicker">Color</label>
-                <input type="color" id="colorpicker" value="#0000ff">
+                <span class="color">color 
+                <input type="color" id="colorpicker" value="#FFA500">
+                </span >
                 <button class="erasorButton" onclick="changeColor('white')">Eraser</button>
                 <button class="black" onclick="changeColor('random')">Random</button>
                 <button class="Reset" onclick="resetBoard()">Reset</button>
+                <span>
+                
                 <input
                     type="text"
-                    placeholder=" Input size"
+                    id="size"
+                    placeholder="input size"
                     onchange="GiveSizeForGrid(this.value)"
                 />
                 <button class = "set-size" onclick="setSize()">Set Size</button>

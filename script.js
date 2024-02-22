@@ -1,13 +1,9 @@
+// script.js
 
 let color = "black";
 let click = false;
 
-function GiveSizeForGrid(sizeInput) {
-    let size = parseInt(sizeInput);
-
-    // Limit the size between 2 and 100
-    size = Math.max(2, Math.min(size, 100));
-
+function GiveSizeForGrid(size) {
     let board = document.querySelector(".board");
     board.innerHTML = ''; // Clear existing content
 
@@ -27,11 +23,9 @@ GiveSizeForGrid(16);
 function Draw() {
     if (click) {
         if (color === "random") {
-            // Generate random RGB values
             let randomRed = Math.floor(Math.random() * 256);
             let randomGreen = Math.floor(Math.random() * 256);
             let randomBlue = Math.floor(Math.random() * 256);
-
             this.style.backgroundColor = `rgb(${randomRed}, ${randomGreen}, ${randomBlue})`;
         } else {
             this.style.backgroundColor = color;
@@ -57,14 +51,12 @@ function resetBoard() {
     let squares = board.querySelectorAll(".div");
     squares.forEach((div) => (div.style.backgroundColor = "white"));
 }
-function setSize() {
-    let sizeInput = document.getElementById("sizeInput").value;
-    GiveSizeForGrid(parseInt(sizeInput));
-}
-document.querySelector("body").addEventListener("click", (e) => {
-    if (e.target.tagName != "BUTTON") {
-      click = !click;
-          
-  }
-  });
-  
+
+// Toggle click variable based on mouse events
+document.addEventListener("mousedown", function () {
+    click = true;
+});
+
+document.addEventListener("mouseup", function () {
+    click = false;
+});

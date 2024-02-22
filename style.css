@@ -10,18 +10,19 @@ body{
     align-items: center;
     justify-content: center;
     margin-top: 100px;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-family:Arial, Helvetica, sans-serif;
     color: white;
+    
 
 }
-.title{
+p{
+    font-size: 40px;
+    font-weight: bold;
     display: flex;
-    margin-bottom: 50px;
-    font-size: larger;
-    font-weight: bolder;
-    align-items: center;
-    justify-content: center;
-    margin-left: 105px;
+    margin-bottom: 10px;
+    font-weight: bolder;    
+    margin-left: 420px;
+
 
 
 
@@ -29,8 +30,8 @@ body{
 .board {
     display: grid;
     gap: 0px;
-    width: 500px;
-    height: 500px;
+    width: 600px;
+    height: 600px;
     border: 1px solid rgb(155, 151, 151);
     border-radius: 5px;
     
@@ -43,19 +44,33 @@ body{
 }
 
 .buttons{
-    width: 80px;
+    
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 7px;
     margin-top: 130px;
     margin-right: 100px;
     
 }
-button{
-    border:none;
-    background-color: white;
-    border-radius: 4px;
+button {
 
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    color: #050303;
+    background-color: #c9c9c9; /* Set your desired background color */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Hover effect */
+button:hover {
+    background-color: #2980b9; /* Set your desired hover background color */
+    color: #fff;
 }
 
 button .set-size{
@@ -65,7 +80,9 @@ button .set-size{
 .content{
     display: flex;
     flex-direction: row-reverse;
-    
+
+
+    justify-content: center;
 }
 
 .size input {
@@ -78,7 +95,50 @@ button .set-size{
 }
 
 #colorpicker {
-    margin: 5px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    border: none ;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    border-radius: 50px;
+
+}
+#colorpicker::-webkit-color-swatch{
+    border:none;
+    border-radius: 18px;
+}
+span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    margin-top: 5px;
+    gap: 8px;
+}
+#size {
+    
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
     border: none;
     border-radius: 5px;
+    background-color: #14517c; /* Set your desired background color */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#size::placeholder {
+    color: #ffffff7c; /* Set your desired placeholder text color */
+    text-align: center;
+}
+.color{
+    font-size: 22px;
+    text-align: center;
+    text-decoration: none;
+
 }
