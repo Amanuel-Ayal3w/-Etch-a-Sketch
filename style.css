@@ -1,9 +1,8 @@
 .board {
     display: grid;
-    gap: 0px; 
-    width: 500px; 
-    height:500px; 
-    
+    gap: 0px;
+    width: 500px;
+    height: 500px;
 }
 
 .div {
