@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link  rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    
+    
+    <body>
+       <div class="flex container">
+           <div class="title">Etch-A-SKETCH</div>
+           <div class="content">
+            <div class="board"></div>
+               <div class="buttons">
+                    <button class="black">choose color</button>
+                    <button class="blue"onclick="changeColor('blue')">Black</button>
+                   <button class="green ">Green</button>
+                   <button class="black">Random</button>
+
+               </div>
+               <div class = "size"> <input
+                 
+                type="text"
+                placeholder="Size of Board"
+              
+                onchange="changeSize(this.value)"
+              />
+              <button>Set Size</button>
+ 
+                </div >
+              
+            <div>
+                
+
+           </div>
+       </div>
+    </body>
+    </html>
+    

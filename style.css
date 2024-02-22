@@ -1,0 +1,12 @@
+.board {
+    display: grid;
+    gap: 0px; 
+    width: 500px; 
+    height:500px; 
+    
+}
+
+.div {
+    background-color: white;
+    border: 0.001px solid #ccc;
+}
